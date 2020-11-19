@@ -240,3 +240,35 @@ input[type=submit] {
     border: 2px solid #fcfafc;
     height: 35px;
 }
+
+.table-container {
+    margin: 0 auto;
+    background-color: #ede5e3;
+    width: 105%;
+}
+
+.table {
+    margin: 3vh;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 16px;
+    text-align: center;
+}
+
+td {
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #d1cfe4;
+}

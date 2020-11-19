@@ -26,7 +26,6 @@ document.querySelector('.main-form').addEventListener('submit', (e) => {
         }
     }
 
-
 )
 
 
