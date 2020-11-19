@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bitrupt Trainee Website </title>
+</head>
+
+<body>
+
+    <!--Main Body code -->
+
+    <div class="container-logout">
+        <div class="logout-form">
+            <img src="img/logo.png" alt="" style="margin-top: 20px;">
+            <form name="logoutForm" class="form-head">
+                <div class="form-log">
+                    <input type="text" name="email" id="form-type" placeholder="Email">
+                </div>
+                <br>
+                <div class="form-log">
+                    <input type="password" name="password" id="form-type" placeholder="Password">
+                </div>
+                <br>
+                <div class="form-log">
+                    <input type="submit" name="" value="Login" id="submit-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p id="modal-text">Some text in the Modal..</p>
+            <br>
+            <hr>
+            <button type="button" class="close" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+
+    <script>
+        //* Logout Page validation
+        const logoutForm = document.querySelector('.form-head');
+
+        logoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.logoutForm.email.value;
+            const password = document.logoutForm.password.value;
+            let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            let passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+            if (!email || !password) {
+                validateLogout('Login Failed', 'Please fill all fields');
+                return false;
+            }
+            if (!email.match(pattern)) {
+                validateLogout('Login Failed', 'Please enter a valid email');
+                return false;
+            }
+            if (!password.match(passwordPattern)) {
+                validateLogout('Login Failed', 'Please enter a valid password');
+                return false;
+            }
+
+        })
+
+        const validateLogout = (message, err) => {
+            var modal = document.getElementById("myModal");
+            const btn = document.querySelector(".close");
+            let modalText = document.getElementById('modal-text');
+
+            if (message && err) {
+                modalText.innerHTML = `${message} <br> ${err}`;
+                modal.style.display = 'block';
+
+                btn.onclick = () => {
+                        modal.style.display = "none";
+                    }
+                    //To Close modal when click on screen
+                window.onclick = (event) => {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
