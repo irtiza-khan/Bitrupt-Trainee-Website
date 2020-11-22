@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Bitrupt Trainee Website </title>
@@ -22,14 +23,28 @@
     <!--Main Body code -->
 
     <div class="container">
-        <div class="side-nav">
+        <div class="side-nav" style="display: none;" onclick="closeNav()">
+
             <button class=" button" onclick="document.location='index.html'">Home </button>
             <button class=" button" onclick="document.location='profile.html'">Profile </button>
             <button class=" button" onclick="document.location='about.html'">About Us</button>
             <button class=" button" onclick="document.location='contact.html'">Contact Us </button>
             <button class=" btn button" onclick="document.location='logout.html'">logout</button>
 
+        </div>
 
+        <!--This is the Side Bar That will Collapse-->
+        <div class="leftSideBar" id="mySidebar" onclick="openNav()">
+            <div>
+                <a href="#"><span><button class="button-toggle"><i class="fas fa-home" style="margin-right:6px;"></i></button></a></span>
+                <br></br>
+                <a href="#"><span><button class="button-toggle"><i class="fas fa-user-alt" style="margin-right: 6px;"></i></button></a></span>
+                <br></br>
+                <a href="#"><span><button class="button-toggle"><i class="fas fa-users" style="margin-right: 6px;"></i></button></a></span>
+                <br></br>
+                <a href="#"><span><button class="button-toggle" style="margin-bottom: 175%; margin-right:20px;"><i class="fas fa-envelope" style="margin-right: 6px;"></i></button></a></span>
+                <a href="#"><span><button class="button-toggle"><i class="fas fa-sign-out-alt" style="margin-right: 6px;"></i></button></a></span>
+            </div>
         </div>
         <!--Table container-->
         <div class="left-container">
@@ -103,8 +118,7 @@
         </div>
 
     </div>
-
-
+    <script src="js/nav.js"></script>
 
 
 </body>
