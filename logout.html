@@ -26,7 +26,10 @@
                 </div>
                 <br>
                 <div class="form-log">
-                    <input type="submit" name="" value="Login" id="submit-btn">
+                    <a href="index.html">
+                        <input type="submit" name="" value="Login" id="submit-btn">
+                    </a>
+
                 </div>
             </form>
         </div>
@@ -66,6 +69,10 @@
             if (!password.match(passwordPattern)) {
                 validateLogout('Login Failed', 'Please enter a valid password');
                 return false;
+            }
+            if (email.match(pattern) && password.match(passwordPattern)) {
+                window.location = 'index.html';
+                return true;
             }
 
         })
