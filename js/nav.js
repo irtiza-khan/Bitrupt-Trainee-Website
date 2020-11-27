@@ -3,21 +3,16 @@ let leftSideBar = document.querySelector('.leftSideBar');
 let leftContainer = document.querySelector('.left-container');
 
 
-window.onload = () => {
-    leftSideBar.style.display = 'block'
-    sideNav.style.display = 'none';
-    leftContainer.style.width = '100%'
 
-}
 
 
 function openNav() {
     //opens side navbar by 70 percent
-    sideNav.style.width = "16%"
-    sideNav.style.display = 'block';
+    leftSideBar.style.width = "7%"
+    leftSideBar.style.display = 'block';
 
-    if (sideNav.style.width = '16%') {
-        leftSideBar.style.display = 'none';
+    if (leftSideBar.style.width = '7%') {
+        sideNav.style.display = 'none';
     }
 
 }
@@ -27,8 +22,8 @@ function openNav() {
 
 function closeNav() {
     //closes side navbar totally
-    sideNav.style.width = "0"
-    sideNav.style.display = 'none';
-    leftSideBar.style.display = 'block'
+    leftSideBar.style.width = "0"
+    leftSideBar.style.display = 'none';
+    sideNav.style.display = 'block'
 
 }

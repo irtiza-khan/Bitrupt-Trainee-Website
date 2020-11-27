@@ -23,22 +23,22 @@
     <!--Main Body code -->
 
     <div class="container">
-        <div class="side-nav" style="display: none;" onclick="closeNav()">
+        <div class="side-nav" onclick="openNav()">
 
-            <button class=" button" onclick="document.location='index.html'">Home </button>
+            <button class=" button" onclick="document.location='home.html'">Home </button>
             <button class=" button" onclick="document.location='profile.html'">Profile </button>
             <button class=" button" onclick="document.location='about.html'">About Us</button>
             <button class=" button" onclick="document.location='contact.html'">Contact Us </button>
-            <button class=" btn button" onclick="document.location='logout.html'">logout</button>
+            <button class=" btn button" onclick="document.location='index.html'">logout</button>
 
         </div>
 
         <!--This is the Side Bar That will Collapse-->
-        <div class="leftSideBar" id="mySidebar" onclick="openNav()">
-            <div class="left-side">
+        <div class="leftSideBar" id="mySidebar" style="display: none;" onclick="closeNav()">
+            <div class="left-side" style="margin-left: -0.6rem;">
                 <a href="#"><span><button class="button-toggle" ><i class="fas fa-home"  ></i></button></a></span>
                 <br></br>
-                <a href="#"><span><button class="button-toggle"style="margin-top:15px"><i class="fas fa-user-alt" ></i></button></a></span>
+                <a href="#"><span><button class="button-toggle" style="margin-top: 15px;"><i class="fas fa-user-alt" ></i></button></a></span>
                 <br></br>
                 <a href="#"><span><button class="button-toggle" style="margin-top:15px"><i class="fas fa-users" ></i></button></a></span>
                 <br></br>
